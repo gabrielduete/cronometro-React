@@ -10,5 +10,3 @@
 - [ReactJS](https://reactjs.org/)
 
 ## 🧐 Preview  
-
-## 👉 Teste em: 
