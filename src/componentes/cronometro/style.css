@@ -1,0 +1,48 @@
+.cronometro{
+    /* Estilização */
+    background-color: rgb(37,37,37);
+    width: 70%;
+    height: 80%;
+    border-radius: 15px;
+    box-shadow: 8px 10px 2px 1px rgba(0, 0, 0, 0.384);
+
+    /* Alinhamento dos itens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1{
+    /* Estilização */
+    color: gray;
+    font-size: 1.4em;
+}
+
+/* Ajustando responsividade */
+@media (min-width: 599px){
+    h1{
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 999px){
+    .cronometro{
+        /* Ajustando container ao tamanho da tela */
+        width: 30%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .cronometro{
+        /* Ajustando container ao tamanho da tela */
+        width: 20%;
+    }
+}
+
+@media (min-height: 1000px){
+    .cronometro{
+        /* Ajustando container ao tamanho da tela */
+        width: 30%;
+    }
+}
