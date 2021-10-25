@@ -10,9 +10,5 @@
 - [ReactJS](https://reactjs.org/)
 
 ## 🧐 Preview  
-<img src = './imgsReadme/img1.png' />
-<img src = './imgsReadme/img2.png' />
-<img src = './imgsReadme/img3.png' />
-
 
 ## 👉 Teste em: 
