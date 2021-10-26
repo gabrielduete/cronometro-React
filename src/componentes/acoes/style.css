@@ -16,7 +16,7 @@
     border: none;
     margin: 0% 10%;
     font-size: 1.3em;
-    padding: 8%;
+    padding: 17%;
     box-shadow: 4px 4px 2px 2px rgba(0, 0, 0, 0.384);
     outline: none;
     cursor: pointer;
@@ -29,13 +29,20 @@
 
 .containerBotoes button:active{
     /* Mudando a cor do botão ao clicar */
-    background-color: rgba(0, 0, 0, 0.384);
+    transition-duration: .7s;
+    background-color: rgba(0, 0, 0, 0.281);
+    box-shadow: none;
     color: rgb(255, 55, 96);
 }
 
-/* Aumentando o tamanho do botão de iniciar, para dar destaque */
-button:nth-child(2){
-    padding: 17%;
+button.hide{
+    transition-duration: 1s;
+    display: none;
+}
+
+button.show{
+    transition-duration: 1s;
+    display: flex;
 }
 
 /* Ajustando responsividade */

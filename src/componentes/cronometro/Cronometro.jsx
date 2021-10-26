@@ -2,11 +2,13 @@ import React, { useState } from "react"
 import './style.css'
 
 import Display from "../display/Display"
-import Botoes from '../botoes/Botoes'
+import Acoes from '../acoes/Acoes'
+
 
 function Cronometro(){
-
     // State com os valores do cronômetro
+    const [running, setRunning] = useState(0)
+    
     const [tempo, setTempo] = useState({
         stateHoras: 0,
         stateMinutos: 0,
@@ -54,12 +56,14 @@ function Cronometro(){
         }
 
         setClicou(true)
+        setRunning(1)
     }
 
     // Função responsvel por pausar o cronômetro
     const parar = () => {
         clearInterval(intervalo)
         setClicou(false)
+        setRunning(2)
     }
     
     // Função responsável por zerar os valores do cronômetro
@@ -71,8 +75,7 @@ function Cronometro(){
         })
 
         horas = minutos = segundos = 0
-
-        parar()
+        iniciar()
     }
 
     return (
@@ -86,10 +89,11 @@ function Cronometro(){
 
             />
 
-            <Botoes 
+            <Acoes 
                 iniciar = {iniciar}
                 parar = {parar}
                 reiniciar = {reiniciar}
+                running = {running}
             />
         </section>
     )
