@@ -34,7 +34,7 @@
 }
 
 /* Aumentando o tamanho do botão de iniciar, para dar destaque */
-button:nth-child(2){
+button:nth-child(1){
     padding: 17%;
 }
 

@@ -3,8 +3,13 @@ import React from 'react'
 import { FaRedoAlt } from "react-icons/fa"
 
 function BotaoReiniciar(props){
+
+    const handleRestart = () => {
+        props.onClick(false);
+    }
+
     return (
-        <button onClick = {props.reiniciar}>
+        <button onClick = {handleRestart}>
             <FaRedoAlt />
         </button>
     )   
