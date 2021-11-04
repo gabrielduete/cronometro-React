@@ -16,10 +16,6 @@ function Cronometro(){
     // Definindo state para guardar o setInterval
     const [intervalo, setIntervalo] = useState()
 
-    // State para não deixar o usuário spammar clicks para iniciar o cronômetro 
-    // e ele não bugar :p
-    const [clicou, setClicou] = useState(false)
-
     // Variáveis para serem atribuidas como valores para os states dos cronômetros
     let segundos = tempo.stateSegundos
     let minutos = tempo.stateMinutos
@@ -47,19 +43,14 @@ function Cronometro(){
 
     // Função responsável por rodar a função incrementa a cada 1segundo
     const iniciar = () =>{
-        if(!clicou){
-            setIntervalo(setInterval(() => {
-                incrementa()
-            }, 1000))
-        }
-
-        setClicou(true)
+        setIntervalo(setInterval(() => {
+            incrementa()
+        }, 1000))
     }
 
     // Função responsvel por pausar o cronômetro
     const parar = () => {
         clearInterval(intervalo)
-        setClicou(false)
     }
     
     // Função responsável por zerar os valores do cronômetro
